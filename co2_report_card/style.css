@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+:root {
+	--primary-green: #3eb651;
+	--card-bg: #e6e6e6;
+	--card-bg--org: #f4e4bf;
+	--card-ibg: #f2f2f2;
+	--text-hd: #2c2b2b;
+	--text-sec: #585858;
+	--icon-gray: #7b7b7b;
+	--text-offwhite: #e4e4de;
+}
+body {
+	background: var(--card-ibg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+p {
+	font-size: 12px;
+	color: var(--text-hd);
+	font-weight: 500;
+}
+small {
+	font-size: 12px;
+}
+h5,
+h6 {
+	color: var(--text-hd);
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.card {
+	max-width: 264px;
+	width: 100%;
+	background: var(--card-bg);
+	border-radius: 4px;
+}
+
+.card_header {
+	height: 62px;
+	background: var(--primary-green);
+	padding: 0 12px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	border-radius: 4px 4px 0 0;
+	overflow: hidden;
+	position: relative;
+
+	.title {
+		> h4 {
+			color: var(--card-ibg);
+			font-size: 14px;
+			font-weight: 600;
+		}
+		> p {
+			color: var(--text-offwhite);
+		}
+	}
+	> img {
+		position: absolute;
+		right: -5px;
+		top: 8px;
+	}
+}
+.card_container {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+.card_body {
+	max-width: 100%;
+	padding: 8px 8px;
+	background-color: var(--card-bg);
+
+	> h2 {
+		font-size: 12px;
+		text-align: center;
+		padding: 8px 0px;
+		font-weight: 500;
+	}
+
+	.card_row {
+		display: flex;
+		gap: 6px;
+
+		.card_box {
+			width: 121px;
+			padding: 8px 12px;
+			background-color: var(--card-ibg);
+			border-radius: 4px;
+			.card_content {
+				display: flex;
+				flex-direction: column;
+				gap: 2px;
+
+				.info_row {
+					display: flex;
+					align-items: center;
+					gap: 4px;
+					border-radius: 4px;
+				}
+			}
+		}
+	}
+}
+
+.full-width {
+	min-width: 100%;
+	background-color: var(--card-bg--org) !important;
+	display: flex;
+	justify-content: center;
+}
+
+.card_footer {
+	position: relative;
+	height: 60px;
+	> img {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+}
